@@ -11,7 +11,10 @@
 {% if session.get('user_id') %}
 <nav class="navbar navbar-expand-lg navbar-dark topbar">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="{{ url_for('dashboard') }}">◈ Control de Gastos</a>
+    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="{{ url_for('dashboard') }}">
+      <img src="{{ url_for('static', filename='img/uprit_logo.png') }}" alt="Logo UPRIT" style="width: 26px; height: 26px; object-fit: contain; border-radius: 4px;">
+      Control de Gastos
+    </a>
     <div class="d-flex gap-2 align-items-center">
       <a class="nav-link text-white" href="{{ url_for('dashboard') }}">Inicio</a>
       <a class="nav-link text-white" href="{{ url_for('reportes') }}">Reportes</a>
